@@ -14,4 +14,10 @@
     <PackageReference Include="Silk.NET.Windowing" Version="2.23.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Simulation\" />
+    <Folder Include="Render\" />
+  </ItemGroup>
+
 </Project>
