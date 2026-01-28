@@ -8,11 +8,15 @@ class Program
     static IWindow window;
     static GL gl;
 
+    /// <summary>
+    /// Запуск программы
+    /// </summary>
+    /// <param name="args"></param>
     static void Main(string[] args)
     {
         var options = WindowOptions.Default;
         options.Size = new Vector2D<int>(800, 600);
-        options.Title = "Silk.NET OpenGL";
+        options.Title = "Graphics OpenGL";
 
         window = Window.Create(options);
 
@@ -22,11 +26,17 @@ class Program
         window.Run();
     }
 
+    /// <summary>
+    /// Загрузка окна OpenGL
+    /// </summary>
     static void OnLoad()
     {
         gl = GL.GetApi(window);
-        gl.ClearColor(0.1f, 0.1f, 0.15f, 1f);
+
+        //Серый цвет заднего фона
+        gl.ClearColor(0.1f, 0.1f, 0.1f, 1f);
     }
+
 
     static void OnRender(double delta)
     {
